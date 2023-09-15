@@ -32,6 +32,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: GesturesSample());
+    return const MaterialApp(home: FormSamplePage());
   }
 }
