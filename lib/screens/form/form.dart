@@ -9,17 +9,17 @@ class FormSamplePage extends StatefulWidget {
 
 class _FormSamplePageState extends State<FormSamplePage> {
   final formKey = GlobalKey<FormState>();
-  final emailController=TextEditingController();
-  final passwordController=TextEditingController();
-  void checkLogin(){
-    final email=emailController.text;
-    final password=passwordController.text;
-    if(email==password){
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login ok")));
-
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  void checkLogin() {
+    final email = emailController.text;
+    final password = passwordController.text;
+    if (email == password) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          backgroundColor: Colors.green, content: Text("Login success")));
     }
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +44,7 @@ class _FormSamplePageState extends State<FormSamplePage> {
                       }
                     },
                     decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.email_outlined),
                         border: OutlineInputBorder(),
                         label: Text("Email"),
                         hintText: "Enter your email"),
@@ -52,7 +53,7 @@ class _FormSamplePageState extends State<FormSamplePage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    controller: passwordController,
+                      controller: passwordController,
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Password should not be empty";
@@ -60,6 +61,7 @@ class _FormSamplePageState extends State<FormSamplePage> {
                       },
                       obscureText: true,
                       decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.password_rounded),
                           border: OutlineInputBorder(),
                           label: Text("Passwoord"),
                           hintText: "Enter your password")),
@@ -67,10 +69,6 @@ class _FormSamplePageState extends State<FormSamplePage> {
                 ElevatedButton(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                                backgroundColor: Colors.green,
-                                content: Text("Success")));
                         checkLogin();
                       }
                     },
