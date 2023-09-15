@@ -4,6 +4,11 @@ import 'package:flutter1/screens/Checkbox/checkboxsample.dart';
 import 'package:flutter1/screens/Container/container_widget.dart';
 import 'package:flutter1/screens/Icons/iconssample.dart';
 import 'package:flutter1/screens/PopupMenuButton/popupmenu.dart';
+import 'package:flutter1/screens/QuizApp/quizapppage1.dart';
+import 'package:flutter1/screens/QuizApp/quizapppage2.dart';
+import 'package:flutter1/screens/QuizApp/quizapppage3.dart';
+import 'package:flutter1/screens/QuizApp/quizapppage4.dart';
+import 'package:flutter1/screens/QuizApp/quizapppage5.dart';
 import 'package:flutter1/screens/button/buttonsample.dart';
 import 'package:flutter1/screens/calculatorapp/calculatorapp.dart';
 import 'package:flutter1/screens/centerwidget.dart';
@@ -33,6 +38,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: CalculatorApp());
+    return const MaterialApp(home: QuizAppPage3());
   }
 }
