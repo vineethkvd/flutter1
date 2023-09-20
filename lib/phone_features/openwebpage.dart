@@ -45,6 +45,7 @@ class _OpenWebPAgeState extends State<OpenWebPAge> {
     await launchUrl(Uri.parse(mapUrl));
 
   }
+  var isLoading=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +77,12 @@ class _OpenWebPAgeState extends State<OpenWebPAge> {
               setState(() {
                 getMap();
               });
-            }, child: Text("Map"))
+            }, child: Text("Map")),
+            CircularProgressIndicator(
+
+
+            ),
+            isLoading?LinearProgressIndicator():Text("Data")
           ],
         ),
       ),

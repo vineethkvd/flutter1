@@ -33,6 +33,7 @@ import 'package:flutter1/screens/second_screen.dart';
 import 'package:flutter1/screens/stack/stackexample.dart';
 import 'package:flutter1/screens/text/textsample.dart';
 import 'package:flutter1/screens/textfield//textareasample.dart';
+import 'package:flutter1/splash.dart';
 
 import 'form/SnackBar/snakbarsample.dart';
 
@@ -45,6 +46,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: OpenWebPAge());
+    return const MaterialApp(home: Splash());
   }
 }
