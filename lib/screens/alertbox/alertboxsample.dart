@@ -24,7 +24,7 @@ class _AlertBoxSampleState extends State<AlertBoxSample> {
                       builder: (context) {
                         return AlertDialog(
                          // elevation: 500,
-                          content: TextField(),
+                          content: const TextField(),
                           actions: [
                             TextButton(
                                 onPressed: () {
