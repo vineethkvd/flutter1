@@ -36,6 +36,11 @@ class _TabBarSampleState extends State<TabBarSample> {
             )
           ],
         ),
+        body: const TabBarView(children: [
+          Center( child: Text("Page 1")),
+          Center( child: Text("Page 2")),
+          Center( child: Text("Page 3")),
+        ]),
       ),
     );
   }
