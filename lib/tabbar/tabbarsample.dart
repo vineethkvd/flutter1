@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/tabbar/tabbarsample1.dart';
 
 class TabBarSample extends StatefulWidget {
   const TabBarSample({super.key});
@@ -14,7 +15,14 @@ class _TabBarSampleState extends State<TabBarSample> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          bottom: TabBar(tabs: [
+          elevation: 40,
+          bottom: TabBar(
+            labelColor: Colors.yellow,
+        indicatorColor: Colors.red,
+              unselectedLabelColor: Colors.white,
+      // dividerColor: Colors.green,
+       // indicatorSize: TabBarIndicatorSize.tab,
+        tabs: [
             Tab(icon: Icon(Icons.home),),
             Tab(child: Text("Status"),),
             Tab(child: Text("Chat"),)
@@ -37,10 +45,17 @@ class _TabBarSampleState extends State<TabBarSample> {
           ],
         ),
         body: const TabBarView(children: [
-          Center( child: Text("Page 1")),
+          Center( child: TabBarSampleOne()),
+Text("Hello"),
           Center( child: Text("Page 2")),
-          Center( child: Text("Page 3")),
+        //  Center( child: Text("Page 3")),
         ]),
+        floatingActionButton: FloatingActionButton(
+          tooltip: "add",
+          onPressed: () {  },
+          child: Icon(Icons.add),
+        ),
+
       ),
     );
   }
