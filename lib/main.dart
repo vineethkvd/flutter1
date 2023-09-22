@@ -24,6 +24,7 @@ import 'package:flutter1/screens/drawer/drawersample.dart';
 import 'package:flutter1/screens/form/form.dart';
 import 'package:flutter1/screens/gestures/gesturessample.dart';
 import 'package:flutter1/screens/gridview/gridviewsample.dart';
+import 'package:flutter1/screens/gridview/gridviewsample2.dart';
 import 'package:flutter1/screens/image/imagesample.dart';
 import 'package:flutter1/screens/listview/listviewsample.dart';
 import 'package:flutter1/screens/listview/listviewsample1.dart';
@@ -56,6 +57,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: GridViewSample());
+    return const MaterialApp(home: WhatsAppSplashScreen());
   }
 }
