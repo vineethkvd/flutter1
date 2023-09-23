@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter1/assignment_module2/questionsample3.dart';
 import 'package:flutter1/form/formsample.dart';
 import 'package:flutter1/phone_features/openwebpage.dart';
+import 'package:flutter1/provider/changenotifyprovider/counternotifier.dart';
+import 'package:flutter1/provider/consumer/counterpage.dart';
 import 'package:flutter1/screens/Checkbox/checkboxsample.dart';
 import 'package:flutter1/screens/Container/container_widget.dart';
 import 'package:flutter1/screens/Icons/iconssample.dart';
@@ -41,6 +44,7 @@ import 'package:flutter1/splash.dart';
 import 'package:flutter1/tabbar/tabbarsample.dart';
 import 'package:flutter1/tabbar/tabbarsample1.dart';
 import 'package:flutter1/whatsappclone/whatsappsplashscreen.dart';
+import 'package:provider/provider.dart';
 
 import 'assignment_module2/questionsample2.dart';
 import 'assignment_module2/questionsample1.dart';
@@ -57,6 +61,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: WhatsAppSplashScreen());
+    return ChangeNotifierProvider(
+        create:(context) => CounterProvider(),
+        child: const MaterialApp(home: CounterPage()));
   }
 }
