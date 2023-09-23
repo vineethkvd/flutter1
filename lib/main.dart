@@ -5,6 +5,9 @@ import 'package:flutter1/form/formsample.dart';
 import 'package:flutter1/phone_features/openwebpage.dart';
 import 'package:flutter1/provider/changenotifyprovider/counternotifier.dart';
 import 'package:flutter1/provider/consumer/counterpage.dart';
+import 'package:flutter1/provider/providerexample2/accountscreen.dart';
+import 'package:flutter1/provider/providerexample2/changenotifier2/changenotifier2.dart';
+import 'package:flutter1/provider/providerexample2/settingsscreen.dart';
 import 'package:flutter1/screens/Checkbox/checkboxsample.dart';
 import 'package:flutter1/screens/Container/container_widget.dart';
 import 'package:flutter1/screens/Icons/iconssample.dart';
@@ -62,7 +65,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create:(context) => CounterProvider(),
-        child: const MaterialApp(home: CounterPage()));
+      create: (context) => Data(),
+      child: MaterialApp(
+        home: const AccountScreen(),
+        routes: {
+          'account_screen': (context) => const AccountScreen(),
+          'settings_screen': (context) => const SettingsScreen(),
+        },
+      ),
+    );
   }
 }
