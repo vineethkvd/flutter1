@@ -12,6 +12,7 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  static const String id = 'account_screen';
   @override
   Widget build(BuildContext context) {
     final dataProvider = Provider.of<Data>(context);

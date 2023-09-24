@@ -12,6 +12,7 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  static const String id = 'settings_screen';
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
