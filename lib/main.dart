@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter1/assignment_module2/questionsample3.dart';
 import 'package:flutter1/form/formsample.dart';
+import 'package:flutter1/getx/home_page.dart';
 import 'package:flutter1/phone_features/openwebpage.dart';
 import 'package:flutter1/provider/changenotifyprovider/counternotifier.dart';
 import 'package:flutter1/provider/consumer/counterpage.dart';
@@ -47,6 +48,7 @@ import 'package:flutter1/splash.dart';
 import 'package:flutter1/tabbar/tabbarsample.dart';
 import 'package:flutter1/tabbar/tabbarsample1.dart';
 import 'package:flutter1/whatsappclone/whatsappsplashscreen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 
 import 'assignment_module2/questionsample2.dart';
@@ -64,15 +66,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Data(),
-      child: MaterialApp(
-        home: const AccountScreen(),
-        routes: {
-          'account_screen': (context) => const AccountScreen(),
-          'settings_screen': (context) => const SettingsScreen(),
-        },
-      ),
+    return GetMaterialApp(
+      home: HomePage(title: "Flutter demo home page"),
     );
+    // return ChangeNotifierProvider(
+    //   create: (context) => Data(),
+    //   // child: MaterialApp(
+    //   //   home: const AccountScreen(),
+    //   //   routes: {
+    //   //     'account_screen': (context) => const AccountScreen(),
+    //   //     'settings_screen': (context) => const SettingsScreen(),
+    //   //   },
+    //   // ),
+    // );
   }
 }

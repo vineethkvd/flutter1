@@ -25,36 +25,36 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         child: Form(
-          key: formKey,
+            key: formKey,
             child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Name'),
-              onSaved: (input) => data['name'] = input,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Email'),
-              onSaved: (input) => data['email'] = input,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Age'),
-              onSaved: (input) => data['age'] = input,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                  onPressed: () {
-                    formKey.currentState!.save();
-                    Provider.of<Data>(context, listen: false)
-                        .updateAccount(data);
-                    formKey.currentState?.reset();
-                  },
-                  child: const Text('Submit')),
-            )
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                TextFormField(
+                  decoration: const InputDecoration(labelText: 'Name'),
+                  onSaved: (input) => data['name'] = input,
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(labelText: 'Email'),
+                  onSaved: (input) => data['email'] = input,
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(labelText: 'Age'),
+                  onSaved: (input) => data['age'] = input,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        formKey.currentState!.save();
+                        Provider.of<Data>(context, listen: false)
+                            .updateAccount(data);
+                        formKey.currentState?.reset();
+                      },
+                      child: const Text('Submit')),
+                )
+              ],
+            )),
       ),
     );
   }
