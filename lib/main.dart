@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FetchApi(),
+      home: FetchNews(),
     );
     // return GetMaterialApp(
     //   home: HomePage(title: "Flutter demo home page"),
