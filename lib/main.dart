@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/api/fetchapi.dart';
 
 import 'package:flutter1/assignment_module2/questionsample3.dart';
 import 'package:flutter1/form/formsample.dart';
@@ -36,6 +37,7 @@ import 'package:flutter1/screens/image/imagesample.dart';
 import 'package:flutter1/screens/listview/listviewsample.dart';
 import 'package:flutter1/screens/listview/listviewsample1.dart';
 import 'package:flutter1/screens/listview/whatsapp_chat.dart';
+import 'package:flutter1/screens/navigator/page1.dart';
 import 'package:flutter1/screens/radiobutton/radiobuttonsample.dart';
 import 'package:flutter1/screens/radiobutton/radiobuttonsample2.dart';
 import 'package:flutter1/screens/row/rowsample.dart';
@@ -66,9 +68,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: HomePage(title: "Flutter demo home page"),
+    return MaterialApp(
+      home: FetchApi(),
     );
+    // return GetMaterialApp(
+    //   home: HomePage(title: "Flutter demo home page"),
+    // );
     // return ChangeNotifierProvider(
     //   create: (context) => Data(),
     //   // child: MaterialApp(
