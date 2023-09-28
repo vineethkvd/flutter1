@@ -38,6 +38,7 @@ import 'package:flutter1/screens/listview/listviewsample.dart';
 import 'package:flutter1/screens/listview/listviewsample1.dart';
 import 'package:flutter1/screens/listview/whatsapp_chat.dart';
 import 'package:flutter1/screens/navigator/page1.dart';
+import 'package:flutter1/screens/newsappapi/fetchnews.dart';
 import 'package:flutter1/screens/radiobutton/radiobuttonsample.dart';
 import 'package:flutter1/screens/radiobutton/radiobuttonsample2.dart';
 import 'package:flutter1/screens/row/rowsample.dart';
