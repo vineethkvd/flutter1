@@ -30,7 +30,8 @@ class _FetchApiState extends State<FetchApi> {
       if (response.statusCode == 200) {
         final parsedData = json.decode(response.body);
         setState(() {
-          newsSources = parsedData['sources']; // Use 'sources' key to access data
+          newsSources =
+              parsedData['sources']; // Use 'sources' key to access data
         });
       } else {
         throw Exception('Failed to load news sources');
@@ -62,7 +63,8 @@ class _FetchApiState extends State<FetchApi> {
           final source = newsSources[index];
           return ListTile(
             title: Text(source['name'] ?? 'Name not available'),
-            subtitle: Text(source['description'] ?? 'Description not available'),
+            subtitle:
+                Text(source['description'] ?? 'Description not available'),
             trailing: Text(source['category'] ?? 'Category not available'),
           );
         },
@@ -70,7 +72,6 @@ class _FetchApiState extends State<FetchApi> {
     }
   }
 }
-
 
 //
 // import 'package:flutter/material.dart';

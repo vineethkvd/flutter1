@@ -21,7 +21,7 @@ class _FetchNewsState extends State<FetchNews> {
     _fetchNewsSources();
   }
   Future<void> _fetchNewsSources() async {
-    final String apiKey = '6842c385dc5e467eac91d810f147b54a';
+    const String apiKey = '6842c385dc5e467eac91d810f147b54a';
     final Uri url = Uri.parse(
         'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$apiKey');
 
