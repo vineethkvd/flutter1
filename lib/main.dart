@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
-void main(){
-  runApp(const Myapp());
-}
-class Myapp extends StatefulWidget {
-  const Myapp({super.key});
+import 'package:flutter1/sharedpreference/home.dart';
+import 'package:flutter1/sharedpreference/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-  @override
-  State<Myapp> createState() => _MyappState();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+  runApp(MyApp(isLoggedIn: isLoggedIn));
 }
 
-class _MyappState extends State<Myapp> {
+class MyApp extends StatelessWidget {
+  final bool isLoggedIn;
+
+  MyApp({required this.isLoggedIn});
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      routes: {
+        '/login': (context) => Login(),
+        '/home': (context) => Home(),
+      },
+      initialRoute: isLoggedIn ? '/home' : '/login',
+    );
   }
 }

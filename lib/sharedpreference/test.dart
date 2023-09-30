@@ -1,7 +1,7 @@
 // import 'dart:async';
 // import 'package:flutter/material.dart';
-// import 'package:flutter1/sharedpreference/sharedlogin.dart';
-// import 'package:flutter1/sharedpreference/sharedlogout.dart';
+// import 'package:flutter1/sharedpreference/login.dart';
+// import 'package:flutter1/sharedpreference/home.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 //
 //
