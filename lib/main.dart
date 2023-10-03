@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/screens/gridview/gridviewsample.dart';
-void main(){
-  runApp(const MyApp());
-}
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+import 'package:get/get.dart';
 
-  @override
-  State<MyApp> createState() => _MyAppState();
+import 'apigetx/view/displayapidata.dart';
+void main() {
+  runApp(MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: GridViewSample(),
+    return GetMaterialApp(
+      home: DisplayApiData(),
     );
   }
 }
