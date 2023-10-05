@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/speech_to_text/speech_to_text.dart';
+import 'package:flutter1/table/table_sample.dart';
 import 'package:flutter1/text_to_speech/text_to_speech.dart';
 void main(){
   runApp(MyApp());
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TextToSpeech(),
+      home: TableSample(),
     );
   }
 }
