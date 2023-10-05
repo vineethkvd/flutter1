@@ -5,6 +5,7 @@ import 'package:flutter1/table/table_sample2.dart';
 import 'package:flutter1/text_to_speech/text_to_speech.dart';
 
 import 'charts/chart_sample.dart';
+import 'flash_light/flashlightsample.dart';
 void main(){
   runApp(MyApp());
 }
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SpeechToTextScreen(),
+      home: FlashLightSample(),
     );
   }
 }
