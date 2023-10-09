@@ -136,7 +136,7 @@ class _SqlfliteHomePageState extends State<SqlfliteHomePage> {
               itemCount: _journals.length,
               itemBuilder: (context, index) => Card(
                 color: Colors.yellow[200],
-                margifrddreen: const EdgeInsets.all(15),
+                margin: const EdgeInsets.all(15),
                 child: ListTile(
                     title: Text(_journals[index]['title']),
                     subtitle: Text(_journals[index]['description']),

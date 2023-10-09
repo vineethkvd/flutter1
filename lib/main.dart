@@ -1,41 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/calender/calendersample.dart';
-import 'package:flutter1/sharedpreference/example2/logineg2.dart';
-import 'package:flutter1/sqlflite/view/sqlflitehome.dart';
-
-import 'calender/example2/calendersample2.dart';
-
-void main() {
+import 'package:flutter1/toast_notifications/toastsample.dart';
+void main(){
   runApp(const MyApp());
 }
-
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Calender App",
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.orange,
-        fontFamily: 'Georgia',
-//text styling
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        ),
-      ),
-      home: CalenderSample2(),
+      home: ToastNotificationSample(),
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter1/calender/calendersample.dart';
+// import 'package:flutter1/sharedpreference/example2/logineg2.dart';
+// import 'package:flutter1/sqlflite/view/sqlflitehome.dart';
+//
+// import 'calender/example2/calendersample2.dart';
+//
+// void main() {
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "Calender App",
+//       theme: ThemeData(
+//         brightness: Brightness.light,
+//         primaryColor: Colors.orange,
+//         fontFamily: 'Georgia',
+// //text styling
+//         textTheme: TextTheme(
+//           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+//           headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+//           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+//         ),
+//       ),
+//       home: CalenderSample2(),
+//     );
+//   }
+// }
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter1/speech_to_text/speech_to_text.dart';
