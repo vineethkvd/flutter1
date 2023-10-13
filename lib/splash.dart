@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter1/phone_features/openwebpage.dart';
+import 'package:flutter1/phone_features_display_web/openwebpage.dart';
 class Splash extends StatefulWidget {
   const Splash({super.key});
 

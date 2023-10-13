@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/sharedpreference_login/login_page.dart';
 import 'package:flutter1/toast_notifications/toastsample.dart';
+import 'package:flutter1/video/videosample.dart';
+import 'package:flutter1/webview/webviewsample.dart';
+
+import 'google_map/googlemapsample.dart';
 void main(){
   runApp(const MyApp());
 }
@@ -10,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+      home: VideoSample(),
     );
   }
 }
