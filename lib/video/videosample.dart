@@ -15,12 +15,12 @@ class _VideoSampleState extends State<VideoSample> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
-    ));
+    _controller = VideoPlayerController.asset('assets/video/video.mkv');
+
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
   }
+
 
   @override
   void dispose() {
