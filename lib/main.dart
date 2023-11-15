@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/bloc/counter_screen.dart';
 import 'package:flutter1/bloc/logic/bloc/counter_bloc.dart';
+import 'package:flutter1/model_class/example_1/view/product_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => CounterBloc(),
       child: MaterialApp(
-        home: CounterScreen(),
+        home:ProductHomePage(),
       ),
     );
   }
