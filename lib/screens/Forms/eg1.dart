@@ -24,7 +24,6 @@ class _FlutterFormsState extends State<FlutterForms> {
                   style: TextStyle(color: Colors.black45, fontSize: 25),
                 ),
                 Form(
-                  key: ,
                   child: TextFormField(
                     cursorColor: Colors.green,
                     keyboardType: TextInputType.text,
