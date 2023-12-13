@@ -1,26 +1,49 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/bloc/counter_screen.dart';
-import 'package:flutter1/bloc/logic/bloc/counter_bloc.dart';
-import 'package:flutter1/model_class/example_1/view/product_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-void main() {
+import 'package:flutter1/screens/Forms/eg1.dart';
+void main(){
   runApp(MyApp());
 }
-
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CounterBloc(),
-      child: MaterialApp(
-        home:ProductHomePage(),
-      ),
-    );
+    return MaterialApp(home: FlutterForms(),);
   }
 }
+
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter1/bloc/counter_screen.dart';
+// import 'package:flutter1/bloc/logic/bloc/counter_bloc.dart';
+// import 'package:flutter1/model_class/example_1/view/product_screen.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
+//
+// void main() {
+//   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+//   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => CounterBloc(),
+//       child: MaterialApp(
+//         home:ProductHomePage(),
+//       ),
+//     );
+//   }
+// }
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter1/animation/Physics_Animation/physiscs_1.dart';
