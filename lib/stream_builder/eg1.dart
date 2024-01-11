@@ -1,18 +1,15 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-class StreamBuilderSample extends StatefulWidget {
+
+class StreamBuilderSample extends StatelessWidget {
   // Defining the stream
-  static Stream<int> countStream() {
-    return Stream.periodic(
-      const Duration(seconds: 1),
-          (count) => count,
-    ).take(10);
+  static Stream<int> countStream() async* {
+    for (int count = 0; count < 50; count++) {
+      await Future.delayed(const Duration(seconds: 1));
+      yield count;
+    }
   }
 
-  @override
-  State<StreamBuilderSample> createState() => _StreamBuilderSampleState();
-}
-
-class _StreamBuilderSampleState extends State<StreamBuilderSample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +18,7 @@ class _StreamBuilderSampleState extends State<StreamBuilderSample> {
           title: Text('StreamBuilder Example'),
         ),
         body: StreamBuilder<int>(
-          stream: StreamBuilderSample.countStream(),
+          stream: countStream(),
           initialData: 0,
           builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {

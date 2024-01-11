@@ -1,14 +1,12 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-class FuturebuilderSample extends StatefulWidget {
-  @override
-  State<FuturebuilderSample> createState() => _FuturebuilderSampleState();
-}
 
-class _FuturebuilderSampleState extends State<FuturebuilderSample> {
+class FutureBuilderSample extends StatelessWidget {
   // Simulating a future that completes after 5 seconds
-  Future<int> fetchData() async {
-    await Future.delayed(Duration(seconds: 5));
-    return 42;
+  // only return result when the operation completes
+  Future<int> calculateSquare(int num) async {
+    await Future.delayed(const Duration(seconds: 5));
+    return num * num;
   }
 
   @override
@@ -19,24 +17,18 @@ class _FuturebuilderSampleState extends State<FuturebuilderSample> {
           title: Text('FutureBuilder Example'),
         ),
         body: FutureBuilder<int>(
-          future: fetchData(),
-          builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (snapshot.hasError) {
-              return Center(
-                child: Text('Error: ${snapshot.error}'),
-              );
-            } else {
-              return Center(
-                child: Text(
-                  'Data: ${snapshot.data}',
-                  style: const TextStyle(fontSize: 24),
-                ),
-              );
-            }
+          future: calculateSquare(10),
+          builder: (context, snapshot) {
+            return Center(
+              child: snapshot.connectionState == ConnectionState.waiting
+                  ? CircularProgressIndicator()
+                  : snapshot.hasError
+                  ? Text('Error: ${snapshot.error}')
+                  : Text(
+                'Data: ${snapshot.data}',
+                style: const TextStyle(fontSize: 24),
+              ),
+            );
           },
         ),
       ),
