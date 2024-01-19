@@ -54,6 +54,7 @@ dependencies:
   alarm: ^2.1.1
   flutter_alarm_clock: ^0.1.1
   ecommerce_kit: ^0.0.2
+  badges: ^3.1.2
 
 
 
